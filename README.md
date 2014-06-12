@@ -1,5 +1,13 @@
 android-portabilitate
-=====================
+----------------------
+
+# Română
+
+Dacă dorești să afli în ce rețea (și ce tip de rețea) e un număr de telefon din România, această aplicație te poate ajuta.
+
+Funcționează inclusiv pentru numerele portate.
+
+# English
 
 In Romania you have the possibility to migrate your phone number to a different network operator.
 

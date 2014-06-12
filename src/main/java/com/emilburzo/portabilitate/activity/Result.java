@@ -81,7 +81,7 @@ public class Result extends ActionBarActivity {
     private void getPhoneNumber() {
         phoneNumber = Utils.getPhoneNumber(getIntent());
 
-        System.out.println("phoneNumber = " + phoneNumber);
+        Utils.debug(TAG, "phoneNumber = " + phoneNumber);
     }
 
     private boolean isPhoneValid() {

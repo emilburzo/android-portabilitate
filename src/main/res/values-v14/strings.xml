@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ce rețea e?</string>
+    <string name="inputPhoneNumber">Ce număr verificăm azi?</string>
+    <string name="phoneNumber">Numărul de telefon</string>
+    <string name="network">Rețea</string>
+    <string name="phoneNumberEmpty">dă-mi un număr prima dată</string>
+    <string name="phoneNumberInvalid">Verifică numărul că nu pare bun</string>
+    <string name="contactPhoneNumberInvalid">Ceva nu e bine la numărul din agendă</string>
+    <string name="contactsSearchHint">caută după nume sau număr</string>
+</resources>

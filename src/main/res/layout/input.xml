@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/inputPhoneNumber"
+        android:id="@+id/lblPhoneNumber"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        >
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:id="@+id/inputPhoneNumber"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            />
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/btnClear"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="clearInput"
+            android:layout_toRightOf="@id/inputPhoneNumber"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        >
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/btnSearch"
+            android:src="@android:drawable/ic_menu_add"
+            android:background="?attr/selectableItemBackground"
+            android:onClick="lookup"
+            />
+
+        <ImageButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/btnVerify"
+            android:src="@android:drawable/ic_menu_search"
+            android:layout_gravity="center"
+            android:onClick="verify"
+            android:layout_toRightOf="@id/btnSearch"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
+

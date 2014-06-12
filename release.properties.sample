@@ -1,0 +1,4 @@
+keyStore=keys.keystore
+keyStorePassword=storePass
+keyAlias=alias
+keyAliasPassword=aliasPass

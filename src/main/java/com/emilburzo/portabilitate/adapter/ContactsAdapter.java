@@ -44,7 +44,7 @@ public class ContactsAdapter extends BaseAdapter {
         View vi = convertView;
 
         if (vi == null) {
-            vi = inflater.inflate(R.layout.contacts_item, parent);
+            vi = inflater.inflate(R.layout.contacts_item, null);
         }
 
         Contact contact = contactList.get(position);

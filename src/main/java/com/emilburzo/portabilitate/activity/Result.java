@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.view.Window;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.emilburzo.portabilitate.R;
@@ -32,6 +32,8 @@ public class Result extends ActionBarActivity {
     private TextView lblType;
     private TextView textType;
 
+    private ProgressBar progressBar;
+
     enum Error {
         UNKNOWN,
         NETWORK_ISSUE,
@@ -44,9 +46,6 @@ public class Result extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // make sure we support showing a 'loading' indicator
-        supportRequestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
-
         setContentView(R.layout.result);
 
         textNetwork = (TextView) findViewById(R.id.network);
@@ -55,10 +54,12 @@ public class Result extends ActionBarActivity {
         lblNetwork = (TextView) findViewById(R.id.lblNetwork);
         lblType = (TextView) findViewById(R.id.lblType);
 
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
         lblNetwork.setVisibility(View.INVISIBLE);
         lblType.setVisibility(View.INVISIBLE);
 
-        updateProgressBar(true);
+        progressBar.setIndeterminate(true);
 
         getPhoneNumber();
 
@@ -75,7 +76,7 @@ public class Result extends ActionBarActivity {
     }
 
     private void updateProgressBar(boolean visibility) {
-        setSupportProgressBarIndeterminateVisibility(visibility);
+        progressBar.setVisibility(visibility ? View.VISIBLE : View.INVISIBLE);
     }
 
     private void getPhoneNumber() {

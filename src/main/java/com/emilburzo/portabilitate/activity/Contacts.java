@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -40,6 +41,8 @@ public class Contacts extends ActionBarActivity {
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
+        setupActionBar();
+
         // Get ListView object from xml
         listView = (ListView) findViewById(R.id.contactsList);
 
@@ -66,6 +69,11 @@ public class Contacts extends ActionBarActivity {
                 finish();
             }
         });
+    }
+
+    private void setupActionBar() {
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     private void loadContacts() {

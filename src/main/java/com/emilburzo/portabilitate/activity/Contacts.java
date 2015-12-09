@@ -5,7 +5,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -24,7 +24,7 @@ import java.util.List;
 
 import static android.provider.ContactsContract.CommonDataKinds.Phone;
 
-public class Contacts extends ActionBarActivity {
+public class Contacts extends AppCompatActivity {
 
     private static final String TAG = "Contacts";
 

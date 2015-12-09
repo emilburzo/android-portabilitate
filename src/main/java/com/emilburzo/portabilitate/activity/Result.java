@@ -3,7 +3,7 @@ package com.emilburzo.portabilitate.activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Result extends ActionBarActivity {
+public class Result extends AppCompatActivity {
 
     private static final String KEY_NETWORK = "network";
     private static final String KEY_TYPE = "type";

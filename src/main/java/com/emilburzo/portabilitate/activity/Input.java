@@ -2,7 +2,7 @@ package com.emilburzo.portabilitate.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.view.View;
 import android.view.WindowManager;
@@ -13,7 +13,7 @@ import com.emilburzo.portabilitate.constant.Constants;
 import com.emilburzo.portabilitate.util.Utils;
 import com.google.i18n.phonenumbers.NumberParseException;
 
-public class Input extends ActionBarActivity {
+public class Input extends AppCompatActivity {
 
     private static final String TAG = "Input";
 

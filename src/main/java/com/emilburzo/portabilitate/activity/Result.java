@@ -37,7 +37,8 @@ public class Result extends ActionBarActivity {
     enum Error {
         UNKNOWN,
         NETWORK_ISSUE,
-        INVALID_PHONE_NUMBER
+        INVALID_PHONE_NUMBER,
+        ANCOM_DOWN
     }
 
     private String phoneNumber;
@@ -117,6 +118,11 @@ public class Result extends ActionBarActivity {
             try {
                 Document doc = Jsoup.connect(url).timeout(TIMEOUT).userAgent(USER_AGENT).referrer(REFERRER).get();
 
+                if (doc == null) {
+                    error = Error.ANCOM_DOWN;
+                    return null;
+                }
+
                 // check for errors
                 Element element = doc.getElementById(Constants.Jsoup.ID_ERROR);
 
@@ -173,6 +179,9 @@ public class Result extends ActionBarActivity {
                         break;
                     case NETWORK_ISSUE:
                         Toast.makeText(getApplicationContext(), getResources().getText(R.string.networkIssue), Toast.LENGTH_LONG).show();
+                        break;
+                    case ANCOM_DOWN:
+                        Toast.makeText(getApplicationContext(), getResources().getText(R.string.ancomIssue), Toast.LENGTH_LONG).show();
                         break;
                     default:
                         break;
